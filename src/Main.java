@@ -9,7 +9,7 @@ public class Main {
         System.out.println(getIntegerFromList(Arrays.asList(1,2,"a","b",0,15)));
         System.out.println(getIntegerFromList(Arrays.asList(1,2,"a","b","aasf","1", "123",231)));
 
-        int[] testArr = {1, 2, 3, 4, 5};
+        int[] testArr = {8, 4, 3, 4, 5};
         System. out. println ("Test of Task number 2");
         System.out.println(firstNonRepeatingLetter("sTreSS"));
         System.out.println(firstNonRepeatingLetter("stress"));
@@ -22,9 +22,9 @@ public class Main {
 
 
         System. out. println ("Test of Task number 4 (use for)");
-        System.out.println(countOfPairs(testArr,7));
+        System.out.println(countOfPairs(testArr,6));
         System. out. println ("Test of Task number 4 (use stream)");
-        System.out.println(countOfPairsByStream(testArr,7));
+        System.out.println(countOfPairsByStream(testArr,6));
 
 
         System. out. println ("Test of Task number 5");
@@ -84,7 +84,7 @@ public class Main {
     public static int countOfPairs(int[] arr, int target){
         int count = 0;
         for (int i = 0; i < arr.length; i++){
-            for ( int j = i; j < arr.length; j++){
+            for ( int j = i+1; j < arr.length; j++){
                 if (arr[i] + arr[j] == target){
                     count++;
                 }
